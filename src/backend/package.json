@@ -1,0 +1,37 @@
+{
+  "name": "scandicart-backend",
+  "version": "1.0.0",
+  "description": "Scandicart Backend API (Express, Node.js, SQLite)",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "init-db": "node scripts/initDatabase.js",
+    "seed-db": "node scripts/seedDatabase.js",
+    "check-db": "node scripts/checkDatabase.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": [
+    "express",
+    "sqlite",
+    "ecommerce",
+    "api",
+    "backend"
+  ],
+  "author": "Marketify Team",
+  "license": "MIT"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "scandicart",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A modern e-commerce marketplace - monorepo structure",
+  "author": "Scandicart Team",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix src/frontend\" \"npm run dev --prefix src/backend\"",
+    "backend:dev": "npm run dev --prefix src/backend",
+    "frontend:dev": "npm run dev --prefix src/frontend",
+    "build": "npm run build --prefix src/frontend && npm run build --prefix src/backend",
+    "build:frontend": "npm run build --prefix src/frontend",
+    "build:backend": "npm run build --prefix src/backend",
+    "start": "npm start --prefix src/backend",
+    "start:all": "concurrently \"npm start --prefix src/backend\" \"npm run preview --prefix src/frontend\"",
+    "db:init": "npm run init-db --prefix src/backend",
+    "db:seed": "npm run seed-db --prefix src/backend",
+    "db:check": "npm run check-db --prefix src/backend",
+    "lint": "npm run lint --prefix src/frontend && npm run lint --prefix src/backend",
+    "lint:fix": "npm run lint:fix --prefix src/frontend",
+    "format": "npm run format --prefix src/frontend",
+    "test": "npm run test --prefix src/frontend",
+    "test:watch": "npm run test:watch --prefix src/frontend",
+    "clean": "rimraf src/frontend/dist src/backend/node_modules src/frontend/node_modules"
+  },
+  "workspaces": [
+    "src/frontend",
+    "src/backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "rimraf": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/scandicart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/scandicart/issues"
+  },
+  "homepage": "https://github.com/yourusername/scandicart#readme"
+}
